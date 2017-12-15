@@ -1,0 +1,71 @@
+返回status：200为成功，失败时message解释失败原因
+分页返回data内容：
+{
+	"content":[], //请求实体数组
+	"first":false, //是否第一页
+	"last":true, //是否最后一页
+	"number":3, 
+	"numberOfElements":0,
+	"size":2,
+	"sort":[{"ascending":false,"descending":true,"direction":"DESC","ignoreCase":false,"nullHandling":"NATIVE","property":"id"}],
+	"totalElements":2, //总元素个数
+	"totalPages":1 //总页数
+}
+
+1、	登陆
+POST: /account/login 
+param {username: , password: , rememberMe: }
+
+POST: /account/logout 注销 
+
+2、	批量导入管理员
+POST: /root/manager
+3、	批量导入房间信息
+POST: /root/room
+4、	批量导入用户信息
+POST: /root/user
+上传excel文件 {file: }
+
+5、	查看所有报修记录及信息
+GET: /repair/page/{page}
+
+6、	处理报修
+PUT: /repair
+param {id: , status: }
+状态值->
+未被管理员受理--0
+已被管理员受理--1
+已解决问题--2
+无法解决问题--3
+
+7、	搜索指定校区、公寓楼、宿舍信息
+GET: /room/page/{page}
+GET: /room/building/{building}/page/{page}
+GET: /room/building/{building}/floor/{floor}/page/{page}
+GET: /room/building/{building}/room/{room}/page/{page}
+GET: /room/floor/{floor}/page/{page}
+GET: /room/floor/{floor}/room/{room}/page/{page}
+以上为分页获取
+GET: /room/building/{building}/floor/{floor}/room/{room} 只会获得确定的一个房间
+
+8、	充值指定宿舍电量
+POST：/charge
+param {buildingId: ,floorId: ,roomId: , rechargeConsume: }
+
+
+9、	管理员修改当前电价
+POST: /price
+param {price: } Double类型
+
+DELETE: /price/{id}
+
+GET: /price/page/{page}
+分页获取
+
+10、批量为宿舍充值同一额度电量（月初免费额度）
+POST: /charge/all
+param {amount: } Double类型 充值电量（度）
+
+11、充值流水记录
+GET: /charge/history/{roomId}/page/{page}
+这个roomId需要计算 将房间的buildingId+floorId+roomId 得到。。
