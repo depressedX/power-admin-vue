@@ -2,6 +2,15 @@
 
 > 挑战杯电量管理项目-web后台管理系统
 
+认认真真把这个项目重构一遍....  
+各位朋友请监督我  
+....
+
+**该项目是后台管理系统的web前端项目**  
+**后台在哪别问我  我不知道**  
+刘鹏昊  
+2017/12/15
+
 ## Build Setup
 
 ``` bash
@@ -17,5 +26,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
