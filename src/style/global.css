@@ -1,0 +1,13 @@
+body{
+  box-sizing: border-box;
+  width: 1366px;
+  padding-left: 89px;
+  padding-right: 137px;
+  background-color: white;
+  margin: auto;
+  box-shadow: 5px 5px 5px rgba(150,150,150,.3);
+  min-height: 100vh;
+}
+html{
+  background-color: #c9c9c9;
+}

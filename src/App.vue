@@ -1,13 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div>
+    <the-heading/>
+    <the-navigator/>
     <router-view/>
   </div>
 </template>
 
 <script>
+  import TheHeading from './components/heading/TheHeading'
+  import TheNavigator from './components/navigator/TheNavigator'
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    TheHeading,
+    TheNavigator
+  }
 }
 </script>
 
