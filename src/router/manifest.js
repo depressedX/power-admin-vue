@@ -2,11 +2,12 @@
 
 // 路由名称常量表
 const ROUTES_NAME = {
-  TOPUP: "TOPUP",
-  REPAIR: 'REPAIR',
-  BALANCE: 'BALANCE',
-  FUNCTION:'FUNCTION',
-  STATISTICS:'STATISTICS',
+  TOPUP: "topup",
+  REPAIR: 'repair',
+  BALANCE: 'balance',
+  FUNCTION:'function',
+  STATISTICS:'statistics',
+  FLOW_RECORD:'flodRecord',
 
   LOGIN:'LOGIN'
 }
@@ -48,6 +49,12 @@ export default {
       navName: '统计',
       routeName: 'statistics',
       routePath: 'statistics',
+      showOnNav:true
+    },
+    [ROUTES_NAME.FLOW_RECORD]: {
+      navName: '充值流水记录',
+      routeName: 'flowRecord',
+      routePath: 'flowRecord',
       showOnNav:true
     },
     [ROUTES_NAME.LOGIN]: {

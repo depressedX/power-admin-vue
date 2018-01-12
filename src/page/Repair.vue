@@ -1,14 +1,15 @@
 <template>
-  <div>
-<repairement-table/>
-  </div>
+  <el-card class="repairment-table">
+    <repairement-table/>
+  </el-card>
 </template>
 
 <script>
   import RepairementTable from '../components/RepairmentTable'
+
   export default {
     name: "repair",
-    components:{
+    components: {
       RepairementTable
     }
   }

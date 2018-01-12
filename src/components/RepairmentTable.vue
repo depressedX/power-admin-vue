@@ -1,5 +1,4 @@
 <template>
-  <el-card class="repairment-table">
     <el-table
       :data="mockedData"
       style="width: 100%">
@@ -38,7 +37,6 @@
         prop="description"
         label="描述"/>
     </el-table>
-  </el-card>
 </template>
 
 <script>
@@ -48,44 +46,44 @@
       return {
         mockedData: [
           {
-            id: 12,
-            area: '千佛山',
+            id: 1,
+            area: '软件园',
             room: '305',
             studentId: 132,
             reportDate: '2017-1-15',
             finishTime: '2017-1-20',
             status: '未解决',
-            description: '哈哈哈'
+            description: '问题描述'
           },
           {
-            id: 12,
-            area: '千佛山',
+            id: 5,
+            area: '洪家楼',
             room: '305',
             studentId: 132,
             reportDate: '2017-1-15',
             finishTime: '2017-1-20',
             status: '未解决',
-            description: '哈哈哈'
+            description: '问题描述'
           },
           {
-            id: 12,
+            id: 7,
             area: '千佛山',
             room: '305',
             studentId: 132,
             reportDate: '2017-1-15',
             finishTime: '2017-1-20',
             status: '未解决',
-            description: '哈哈哈'
+            description: '问题描述'
           },
           {
-            id: 12,
-            area: '千佛山',
+            id: 8,
+            area: '中心校区',
             room: '305',
             studentId: 132,
             reportDate: '2017-1-15',
             finishTime: '2017-1-20',
             status: '未解决',
-            description: '哈哈哈'
+            description: '问题描述'
           },
         ],
         statusFilter: [
@@ -105,7 +103,4 @@
 </script>
 
 <style scoped>
-  .repairment-table{
-    margin-top: 2em;
-  }
 </style>

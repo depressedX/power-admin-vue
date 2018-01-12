@@ -11,6 +11,7 @@ import Topup from '../page/Topup'
 import Login from '../page/Login'
 import Function from '../page/Function'
 import Statistics from '../page/Statistics'
+import FlowRecord from '../page/FlowRecord'
 
 //store
 import store from '../state/store'
@@ -53,6 +54,12 @@ const router = new Router({
           name:manifest.routes[ROUTES_NAME.STATISTICS].routeName,
           meta:{requiresAuth:true},
           component:Statistics
+        },
+        {
+          path:manifest.routes[ROUTES_NAME.FLOW_RECORD].routePath,
+          name:manifest.routes[ROUTES_NAME.FLOW_RECORD].routeName,
+          meta:{requiresAuth:true},
+          component:FlowRecord
         },
         {
           path:manifest.routes[ROUTES_NAME.LOGIN].routePath,

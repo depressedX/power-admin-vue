@@ -1,7 +1,7 @@
 <template>
-  <div>
-<balance-table/>
-  </div>
+  <el-card class="balance-table">
+    <balance-table/>
+  </el-card>
 </template>
 
 <script>
@@ -9,7 +9,7 @@
 
   export default {
     name: "balance",
-    components:{
+    components: {
       BalanceTable
     }
   }
@@ -17,4 +17,7 @@
 
 <style scoped>
 
+  .balance-table {
+    margin-top: 2em;
+  }
 </style>
