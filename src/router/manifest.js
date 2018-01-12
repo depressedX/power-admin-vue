@@ -4,7 +4,11 @@
 const ROUTES_NAME = {
   TOPUP: "TOPUP",
   REPAIR: 'REPAIR',
-  BALANCE: 'BALANCE'
+  BALANCE: 'BALANCE',
+  FUNCTION:'FUNCTION',
+  STATISTICS:'STATISTICS',
+
+  LOGIN:'LOGIN'
 }
 
 
@@ -19,21 +23,42 @@ export default {
     [ROUTES_NAME.TOPUP]: {
       navName: '充值',
       routeName: 'topup',
-      routePath: 'topup'
+      routePath: 'topup',
+      showOnNav:true
     },
     [ROUTES_NAME.REPAIR]: {
       navName: '报修',
       routeName: 'repair',
-      routePath: 'repair'
+      routePath: 'repair',
+      showOnNav:true
     },
     [ROUTES_NAME.BALANCE]: {
       navName: '电量充值',
       routeName: 'balance',
-      routePath: 'balance'
-    }
+      routePath: 'balance',
+      showOnNav:true
+    },
+    [ROUTES_NAME.FUNCTION]: {
+      navName: '功能',
+      routeName: 'function',
+      routePath: 'function',
+      showOnNav:true
+    },
+    [ROUTES_NAME.STATISTICS]: {
+      navName: '统计',
+      routeName: 'statistics',
+      routePath: 'statistics',
+      showOnNav:true
+    },
+    [ROUTES_NAME.LOGIN]: {
+      navName: '登陆nav',
+      routeName: 'login',
+      routePath: 'login'
+    },
+
   },
   // 默认路由
-  defaultRoute: ROUTES_NAME.REPAIR
+  defaultRoute: ROUTES_NAME.LOGIN
 }
 
 export {ROUTES_NAME}

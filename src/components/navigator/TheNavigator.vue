@@ -4,6 +4,7 @@
       <el-menu-item
         class="nav__item"
         v-for="(navItem,index) in routesInfo"
+        v-if="navItem.showOnNav"
         :route="{name:navItem.routeName}"
         :key="index"
         :index="String(index)">

@@ -1,10 +1,17 @@
 <template>
-  <div>Balance</div>
+  <div>
+<balance-table/>
+  </div>
 </template>
 
 <script>
+  import BalanceTable from '../components/BalanceTable'
+
   export default {
-    name: "balance"
+    name: "balance",
+    components:{
+      BalanceTable
+    }
   }
 </script>
 

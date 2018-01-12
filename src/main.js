@@ -8,9 +8,15 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // css
 import './style/global.css'
+import Chartkick from 'chartkick'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
 
 Vue.use(Element)
 Vue.config.productionTip = false
+
+// chartJS
+Vue.use(VueChartkick, { Chartkick })
 
 /* eslint-disable no-new */
 new Vue({

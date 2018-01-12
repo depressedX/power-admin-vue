@@ -1,17 +1,25 @@
 <template>
   <div>
-    <el-button type="text" class="user-center__text">login</el-button>
+    <el-button type="text" class="user-center__text">{{userCenterText}}</el-button>
     <img :src="accountUserIcon" class="user-center__icon"/>
   </div>
 </template>
 
 <script>
   import accountUserIcon from '../assets/account_user.png'
+  import store from '../state/store'
+  let state = store.state
+
   export default {
     name: "user-center",
     data(){
       return{
-        accountUserIcon
+        accountUserIcon,
+      }
+    },
+    computed:{
+      userCenterText(){
+        return state.isLogin?'注销':'登陆'
       }
     }
   }
